@@ -23,7 +23,7 @@ defmodule Vec3 do
   end
 
   @doc """
-  Multiples `vector1` by a scalar.
+  Multiplies `vector1` by a scalar.
   
   `scalar * vector1`
   """
@@ -37,7 +37,7 @@ defmodule Vec3 do
   
   Normalizing the zero vector ({0, 0, 0}) is an undefined behavior. By default
   the result of undefined is the zero vector, otherwise the term passed through
-  the `undefined` parameter is returned.
+  the additional `undefined` parameter is returned.
   """
   @spec normalize(vec3) :: vec3
   def normalize({_x, _y, _z} = vector) do
@@ -53,7 +53,7 @@ defmodule Vec3 do
   end
 
   @doc """
-  Takes the cross product, or (also known as "vector product") of `vector1` and
+  Takes the cross product (also known as "vector product") of `vector1` and
   `vector2`.
   
   `vector1 X vector2`
