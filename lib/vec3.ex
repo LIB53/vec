@@ -2,6 +2,26 @@ defmodule Vec3 do
 
   @type vec3 :: {float, float, float}
 
+  @spec new(number, number, number) :: vec3
+  @doc """
+  Builds a new vector.
+  """
+  def new(x, y, z) when is_integer(x) and is_integer(x) and is_integer(z) do
+    {x * 1.0, y * 1.0, z * 1.0} # convert to float
+  end
+
+  def new(x, y, z) when is_float(x) and is_float(x) and is_float(z) do
+    {x, y, z}
+  end
+
+  @spec zero() :: vec3
+  @doc """
+  Builds the zero vector.
+  """
+  def zero() do
+    {0.0, 0.0, 0.0}
+  end
+
   @doc """
   Adds `vector1` to `vector2`.
   

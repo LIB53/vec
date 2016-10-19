@@ -3,6 +3,15 @@ defmodule Vec3Test do
   doctest Vec3
 
 
+  test "new" do
+    assert Vec3.new(7, 7, 7) == {7, 7, 7}
+    assert Vec3.new(1, 2, 3) == {1, 2, 3}
+  end
+
+  test "zero" do
+    assert Vec3.new(0, 0, 0) == {0, 0, 0}
+  end
+
   test "add" do
     assert Vec3.add({1, 2, 3}, {6, 5 ,4}) == {7, 7, 7}
   end
