@@ -5,6 +5,15 @@ defmodule Vec3 do
   @doc """
   Builds a new vector.
   """
+  @spec new({number, number, number}) :: vec3
+  def new({x, y, z}) when is_integer(x) and is_integer(x) and is_integer(z) do
+    new(x, y, z)
+  end
+
+  def new({x, y, z}) when is_float(x) and is_float(x) and is_float(z) do
+    new(x, y, z)
+  end
+
   @spec new(number, number, number) :: vec3
   def new(x, y, z) when is_integer(x) and is_integer(x) and is_integer(z) do
     {x * 1.0, y * 1.0, z * 1.0} # convert to float

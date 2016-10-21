@@ -4,12 +4,14 @@ defmodule Vec3Test do
 
 
   test "new" do
-    assert Vec3.new(7, 7, 7) == {7, 7, 7}
-    assert Vec3.new(1, 2, 3) == {1, 2, 3}
+    assert ({1, 2, 3} |> Vec3.new) === {1.0, 2.0, 3.0}
+    assert ({1.0, 2.0, 3.0} |> Vec3.new) === {1.0, 2.0, 3.0}
+    assert Vec3.new(7, 7, 7) === {7.0, 7.0, 7.0}
+    assert Vec3.new(1, 2, 3) === {1.0, 2.0, 3.0}
   end
 
   test "zero" do
-    assert Vec3.new(0, 0, 0) == {0, 0, 0}
+    assert Vec3.new(0, 0, 0) === {0.0, 0.0, 0.0}
   end
 
   test "add" do
